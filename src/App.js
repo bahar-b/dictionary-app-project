@@ -1,9 +1,13 @@
-import './App.css';
+import SearchKeyword from "./SearchKeyword";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      hey
+      <main className="main-part">
+        <SearchKeyword />
+      </main>
+      <footer className="footer-part">Code by Bahar</footer>
     </div>
   );
 }
