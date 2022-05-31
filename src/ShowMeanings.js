@@ -1,5 +1,6 @@
 import React from "react";
 import ShowSynonyms from "./ShowSynonyms";
+import ShowExample from "./ShowExample";
 
 export default function ShowMeanings(props) {
   return (
@@ -12,11 +13,7 @@ export default function ShowMeanings(props) {
               {" "}
               <strong>Definition:</strong> {definition.definition}
             </p>
-            <p>
-              {" "}
-              <strong>Example:</strong>
-              {definition.example}
-            </p>
+            <ShowExample example={definition.example} />
             <ShowSynonyms synonyms={definition.synonyms} />
           </div>
         );
