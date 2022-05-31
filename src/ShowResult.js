@@ -1,11 +1,13 @@
 import React from "react";
 import ShowMeanings from "./ShowMeanings";
+import ShowPhonetics from "./ShowPhonetics";
 
 export default function ShowResult(props) {
   if (props.results) {
     return (
       <div className="ShowResult">
         <h2>{props.results.word}</h2>
+        <ShowPhonetics phonetics={props.results.phonetics}/>
         {props.results.meanings.map(function (meanings, index) {
           return (
             <div key={index}>
