@@ -4,11 +4,9 @@ export default function ShowExample(props) {
   if (props.example) {
     return (
       <div className="ShowExample">
-        <p>
-          {" "}
-          <strong>Example:</strong>
+        <div className="example">
           {props.example}
-        </p>
+        </div>
       </div>
     );
   } else {

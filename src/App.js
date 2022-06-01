@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <main className="main-part">
-        <SearchKeyword />
+        <SearchKeyword defaultKeyword={"sunset"} />
       </main>
       <footer className="footer-part">Code by Bahar</footer>
     </div>
