@@ -7,13 +7,21 @@ export default function SearchKeyword(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState("");
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState("");
 
   function handleResponse(response) {
     setResults(response.data[0]);
   }
+  function handlePexelsResponse(response) {
+    setPhotos(response);
+  }
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
+    let pexelsApiKey =
+      "563492ad6f91700001000001f8596e37f35c4fbfaf6d4bebd82d0951";
+    let pexelsApiUrl = `"https://api.pexels.com/v1/search?query=nature&per_page=1"`;
+    axios.get(pexelsApiUrl).then(handlePexelsResponse);
   }
   function load() {
     setLoaded(true);
