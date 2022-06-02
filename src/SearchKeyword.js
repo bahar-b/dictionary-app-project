@@ -33,7 +33,9 @@ export default function SearchKeyword(props) {
         <form className="form-part" onSubmit={handleSubmit}>
           <input type="search" placeholder="sunset" onChange={handleInput} />
           <p>Get definitions, synonyms, and more</p>
-          <ShowResult results={results} />
+          <section>
+            <ShowResult results={results} />
+          </section>
         </form>
       </div>
     );

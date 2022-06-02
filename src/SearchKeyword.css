@@ -1,3 +1,28 @@
 .SearchKeyword {
-  padding: 0px;
+  margin: 38px 147px;
+  border: solid 1px #dddddd;
+  border-radius: 4px;
 }
+.SearchKeyword h1 {
+  padding: 0px 19px;
+  font-size: 35px;
+  margin-left: 50px;
+  margin-bottom: 12px;
+  color: #504a44;
+}
+.SearchKeyword input {
+  width: 50%;
+  height: 30px;
+  margin-left: 72px;
+  font-size: 18px;
+  padding-left: 15px;
+  border-radius: 4px;
+  border: solid 1px #dddddd;
+}
+.SearchKeyword p {
+  padding: 0px 17px;
+  margin-left: 66px;
+  margin-top: 8px;
+  color: #504a44;
+}
+

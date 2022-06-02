@@ -1,0 +1,15 @@
+.ShowPhonetics {
+  margin: 4px 0px 25px 0px;
+  padding-left: 31px;
+}
+.ShowPhonetics a {
+  text-decoration: none;
+  padding-right: 15px;
+  font-size: 16px;
+  color:blue;
+}
+.ShowPhonetics .phonetic {
+  padding-right: 13px;
+  color: #444;
+  font-size: 19px;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import ShowMeanings from "./ShowMeanings";
 import ShowPhonetics from "./ShowPhonetics";
-import "./ShowResult";
+import "./ShowResult.css";
 
 export default function ShowResult(props) {
   if (props.results) {
@@ -16,14 +16,14 @@ export default function ShowResult(props) {
               </div>
             );
           })}
+          {props.results.meanings.map(function (meanings, index) {
+            return (
+              <div key={index}>
+                <ShowMeanings meanings={meanings} />
+              </div>
+            );
+          })}
         </section>
-        {props.results.meanings.map(function (meanings, index) {
-          return (
-            <div key={index}>
-              <ShowMeanings meanings={meanings} />
-            </div>
-          );
-        })}
       </div>
     );
   } else {

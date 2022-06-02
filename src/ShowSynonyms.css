@@ -1,0 +1,10 @@
+ul {
+  margin-top: 3px;
+  padding-left:20px;
+
+}
+.ShowSynonyms li {
+  display: inline;
+  text-decoration: none;
+  color: #767676;
+}
