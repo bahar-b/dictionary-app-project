@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import ShowResult from "./ShowResult";
+import ShowPhotos from "./ShowPhotos";
 import "./SearchKeyword.css";
 
 export default function SearchKeyword(props) {
@@ -9,19 +10,24 @@ export default function SearchKeyword(props) {
   let [loaded, setLoaded] = useState(false);
   let [photos, setPhotos] = useState("");
 
-  function handleResponse(response) {
+  function handleDictionaryResponse(response) {
     setResults(response.data[0]);
   }
   function handlePexelsResponse(response) {
-    setPhotos(response);
+    setPhotos(response.data);
   }
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleDictionaryResponse);
     let pexelsApiKey =
       "563492ad6f91700001000001f8596e37f35c4fbfaf6d4bebd82d0951";
-    let pexelsApiUrl = `"https://api.pexels.com/v1/search?query=nature&per_page=1"`;
-    axios.get(pexelsApiUrl).then(handlePexelsResponse);
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+    
+     axios({
+     method: "get",
+     url: `${pexelsApiUrl}`,
+     headers: { Authorization: `Bearer ${pexelsApiKey}` },
+     }).then(handlePexelsResponse);
   }
   function load() {
     setLoaded(true);
@@ -43,6 +49,7 @@ export default function SearchKeyword(props) {
           <p>Get definitions, synonyms, and more</p>
           <section>
             <ShowResult results={results} />
+            <ShowPhotos photos={photos} />
           </section>
         </form>
       </div>
