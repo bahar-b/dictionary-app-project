@@ -1,6 +1,6 @@
 .App .footer-part {
   text-align: center;
-  margin-top: 15px;
+  margin:15px 0px 15px 0px;
 }
 .App .footer-part a {
   text-decoration: none;

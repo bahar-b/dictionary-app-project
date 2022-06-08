@@ -1,5 +1,5 @@
 import React from "react";
-import "./ShowPhonetics.css"
+import "./ShowPhonetics.css";
 
 export default function ShowPhonetics(props) {
   if (props.phonetics) {

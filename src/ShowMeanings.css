@@ -1,9 +1,9 @@
-.ShowMeanings h3{
-   text-transform: uppercase;
+.ShowMeanings h3 {
+  text-transform: uppercase;
 }
-.ShowMeanings .meaning{
-   padding-left:16px;
+.ShowMeanings .meaning {
+  padding-left: 16px;
 }
-.ShowMeanings .definition{
-   padding-bottom: 3px;
+.ShowMeanings .definition {
+  padding-bottom: 3px;
 }

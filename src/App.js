@@ -9,7 +9,9 @@ function App() {
       </main>
       <footer className="footer-part">
         Code by Bahar{" "}
-        <a href="https://github.com/bahar-b/" target="_blank">open-source on GitHub</a>
+        <a href="https://github.com/bahar-b/" target="_blank" rel="noreferrer">
+          open-source on GitHub
+        </a>
       </footer>
     </div>
   );
